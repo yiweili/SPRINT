@@ -122,7 +122,7 @@ The commands for running SPRINT on the toy dataset in SPRINT/toy_example are giv
 1. compute_HSPs
 
  ```
- bin/compute_HSPs -p toy_example/protein_sequences.seq -h HSP/hsps_toy_example 
+ bin/compute_HSPs -p toy_example/protein_sequences.fasta -h HSP/hsps_toy_example 
  ```
  The above command creates a file hsps_toy_example in the directory SPRINT/HSP
 
@@ -130,11 +130,11 @@ The commands for running SPRINT on the toy dataset in SPRINT/toy_example are giv
 
  2.1 calculate the scores for the pairs in toy_example/test_positive.txt and toy_example/test_negative.txt.
  ```
- bin/predict_interactions -p toy_example/protein_sequences.seq -h HSP/hsps_toy_example -tr toy_example/train_positive.txt -pos toy_example/test_positive.txt -neg toy_example/test_negative.txt -o toy_example/result_test.txt
+ bin/predict_interactions -p toy_example/protein_sequences.fasta -h HSP/hsps_toy_example -tr toy_example/train_positive.txt -pos toy_example/test_positive.txt -neg toy_example/test_negative.txt -o toy_example/result_test.txt
  ```
  2.2 perform the entire interactome prediction.
 ```
-bin/predict_interactions -p toy_example/protein_sequences.seq -h HSP/hsps_toy_example -tr toy_example/train_positive.txt -e -o toy_example/result_interactome.txt
+bin/predict_interactions -p toy_example/protein_sequences.fasta -h HSP/hsps_toy_example -tr toy_example/train_positive.txt -e -o toy_example/result_interactome.txt
 ```
 
 
